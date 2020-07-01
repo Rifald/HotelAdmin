@@ -766,6 +766,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable lin_lay
 drawable logo
+drawable logofix
 drawable main_bgbt
 drawable notification_action_background
 drawable notification_bg

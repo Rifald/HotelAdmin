@@ -11,7 +11,6 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -31,7 +30,6 @@ public class EditHotel extends AppCompatActivity {
     private Button delBtn;
     private EditText namaH;
     private EditText alamatH;
-    private TextView urltv;
     private EditText hargaH;
     private EditText jumlahH;
     private FirebaseFirestore db;
@@ -174,6 +172,13 @@ public class EditHotel extends AppCompatActivity {
             delBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    final StorageReference RefS = storageReference.child(hotel.getNama()+"/" + "Profile.jpg");
+                    RefS.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                        }
+                    });
                     db.collection("hotel")
                             .document(hotel.getNama())
                             .delete().addOnSuccessListener(new OnSuccessListener<Void>() {

@@ -169,7 +169,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="114dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
